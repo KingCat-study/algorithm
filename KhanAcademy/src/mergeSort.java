@@ -35,14 +35,12 @@ public class mergeSort {
 			}
 		}
 
-		if(i > middle) {
-			for(int t = j; t <= end; t++) {
-				sortedArray[k++] =  array[t];
-			}
-		} else {
-			for(int t = i; t <= middle; t++) {
-				sortedArray[k++] =  array[t];
-			}
+		while(i <= middle) {
+			sortedArray[k++] = array[i++];
+		}
+		
+		while(j <= end) {
+			sortedArray[k++] = array[j++];
 		}
 		
 		for(int t = start; t <= end; t++) {
